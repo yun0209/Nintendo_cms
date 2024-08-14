@@ -216,6 +216,10 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
   margin-right: 51px !important;
 }
 
+.subpage {
+  min-height: calc(100vh - 400px);
+}
+
 #hd {
   position: fixed;
   width: 100%;
@@ -244,11 +248,14 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
 }
 #hd .trx {
   height: 70px;
-  padding: 0 5vw;
+  padding: 0 3vw;
 }
 #hd h1 a img {
   display: block;
   max-width: 40vw;
+}
+#hd .gnb {
+  margin-right: 3rem !important;
 }
 #hd .gnb .gnb_li a {
   color: #474545 !important;
@@ -256,8 +263,47 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
 #hd .gnb .gnb_li a:hover {
   color: red !important;
 }
+#hd .myicon .hd_sch {
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+#hd .myicon .hd_sch .sch_stx {
+  float: left;
+  width: 147px;
+  height: 45px;
+  padding-left: 10px;
+  border-radius: 30px 0 0 30px;
+  background: #F8F2F2 !important;
+  border: 0;
+  border-right: 0;
+  font-size: 1.25em;
+  color: #fff;
+}
+#hd .myicon .hd_sch .sch_submit {
+  float: left;
+  width: 60px;
+  height: 45px;
+  border: 0;
+  background: #F8F2F2 !important;
+  color: #fff;
+  border-radius: 0 30px 30px 0;
+  cursor: pointer;
+  font-size: 16px;
+}
+#hd .myicon .hd_sch .sch_submit img {
+  transform: scale(0.8);
+}
+#hd .myicon .hd_sch .search_i {
+  background: url(../img/svg/search_icon.svg);
+  background-size: 20px;
+}
 #hd .myicon a img {
   transform: scale(0.8);
+}
+#hd .singup li {
+  font-weight: 500;
+  font-size: 16px;
 }
 
 #mainBanner {
