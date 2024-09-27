@@ -17,7 +17,7 @@
   <a href = "https://github.com/yun0209/Nintendo_cms?tab=readme-ov-file#%ED%94%8C%EB%9F%AC%EA%B7%B8%EC%9D%B8-%EB%B0%8F-%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC">플러그인 및 라이브러리</a>
 
 
-  <a href ="">작업 관련 주소</a>
+  <a href ="https://github.com/yun0209/Nintendo_cms?tab=readme-ov-file#%EC%9E%91%EC%97%85-%EA%B4%80%EB%A0%A8-%EC%A3%BC%EC%86%8C">작업 관련 주소</a>
 
 ---
 
