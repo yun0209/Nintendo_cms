@@ -9,6 +9,12 @@ include_once(G5_LIB_PATH.'/latest.lib.php'); //최근게시된글을 가져오�
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nintendo</title>
+    <meta name="keywords" content="닌텐도주식회사, Nintendo, Nintendo Switch, Nintendo 3DS, amiibo, 게임기, 콘솔, 게임 소프트웨어, 닌텐도 게임, 게임 하드웨어, 가족 게임, 휴대용 게임기,동물의 숲, 마리오 ,젤다">
+
+    <meta name="description" content="닌텐도의 새로운 소프트웨어 출시! 사전예약하고 단 2주간의 할인 혜택을 받으세요~">
+    <meta property="og:url" content="http://yysportfolio.dothome.co.kr/"/>
+    <meta property="og:image" content="https://github.com/yun0209/Nintendo_cms/blob/main/img/svg/logo_red.svg">
+
 </head>
 
  <!-- 폰트 -->
