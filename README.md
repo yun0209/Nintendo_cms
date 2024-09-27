@@ -16,6 +16,8 @@
 
   <a href = "https://github.com/yun0209/Nintendo_cms?tab=readme-ov-file#%ED%94%8C%EB%9F%AC%EA%B7%B8%EC%9D%B8-%EB%B0%8F-%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC">플러그인 및 라이브러리</a>
 
+  <a href = "" >작업 중 이슈</a>
+
 
   <a href ="https://github.com/yun0209/Nintendo_cms?tab=readme-ov-file#%EC%9E%91%EC%97%85-%EA%B4%80%EB%A0%A8-%EC%A3%BC%EC%86%8C">작업 관련 주소</a>
 
@@ -39,6 +41,21 @@ TOOL : 포토샵, 일러스트, 피그마, XD
 + jQuery UI 1.14.0 버전
 + AOS 2.3.1 버전
 + Bootstrap Icons 1.10.5 버전
+
+<div id="issuse">
+    <h2>작업 이슈</h2>
+    <h3> 모바일 인터페이스 연결 문제 </h3>
+    <table>
+        <tr>
+            <th style="width:50%;">문제</th>
+            <th style="width:50%;">해결</th>
+        </tr>
+        <tr>
+            <td> pc 화면 에서는 반응형이 되지만 모바일 화면에서는 게시물이 안보이고 반응형 지원이 안되는 문제</td>
+            <td>nintendo cms(그누보드)폴더 안에있는 테마 시스템 을 설정을 pc 로 하여 해결하였다. [관련폴더] (https://github.com/yun0209/Nintendo_cms/blob/main/nintendo_cms/theme/basic/theme.config.php)</td>
+        </tr> 
+    </table>
+</div>
 
 ## 작업 관련 주소
 
