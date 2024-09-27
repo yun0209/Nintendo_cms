@@ -18,22 +18,108 @@
     100% { transform: translateX(10%); 
            opacity: 100%;}
 }
-body {
-    cursor: url('/img/svg/mushroom.svg'),auto;
-  }
-  
 
-.d-flex {
-    display: flex;
+@keyframes moveBackground {
+    0% {
+        background-position: 0% 0%;
+    }
+    25% {
+        background-position: 100% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    75% {
+        background-position: 0% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+@keyframes red_stMove {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
 }
 
-.jsb {
-    justify-content: space-between;
+//1400이상 메인 컨텐츠 애니메이션
+@keyframes mUp{
+ 0%{
+    
+    transform: scale(0) translateX(-80%) ;
+    
+ }
+ 50%{
+    transform: scale(1.2) translateX(-50%);
+ }
+ 
+ 100%{
+    transform: scale(1.0) translateX(-50%);
+    
+    
+ }
 }
 
-.aic {
-    align-items: center;
+//메인 컨텐츠 모바일 애니메이션
+@keyframes mUpM{
+    0%{
+       
+       transform: scale(0);
+       
+    }
+
+    50%{
+       transform: scale(1.2);
+    }
+    
+    100%{
+       transform: scale(1.0);
+       
+       
+    }
+   }
+
+//    @media (min-width:991px) {
+//     #musein {
+//         z-index: 100;
+//         position: fixed; /* 요소를 뷰포트에 고정 */
+//         width: 100px; /* 이미지 크기 */
+//         height: 100px; /* 이미지 크기 */
+//         background: url('/img/svg/op_mushroom.svg') no-repeat center ;
+//         background-size: contain; /* 이미지 크기에 맞게 조정 */
+//         pointer-events: none;
+        
+//     }
+//    }
+   
+
+.mt-200{
+    margin-top: 200px !important;
 }
+
+
+
+button{
+    margin: 0;
+    padding: 0;
+    background-color: unset;
+    border: 0;
+}
+
+.bi-list, 
+.bi-x {
+    font-size: 2.5rem;
+}
+
+.bi-list::before, 
+.bi-x::before {
+    font-weight: 900 !important;
+}
+
+
 
 a {
     text-decoration: none !important;
@@ -61,16 +147,21 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
     padding-left: 70px !important;
 }
 
-// .w-100{
-//     width: 100%;
-// }
-// .container{
-//     max-width: 1280px;
-//     margin: 0 auto;
-// }
-// .px-4{
-//     padding: 0 3rem;
-// }
+
+.sing_up{
+    a{
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 600;
+        color: #000000;
+        @media (max-width:991px) {
+            font-size: 12px;
+            color: white;
+           }
+    }
+    
+    
+}
 
 //대메뉴 텍스트
 .gnbT{
@@ -78,6 +169,10 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    @media (max-width:1400px) {
+        font-size: 20px;
+        color: white;
+    }
 
 }
 
@@ -88,6 +183,10 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    @media (max-width:1400px) {
+        font-size: 25px;
+    }
+
 }
 
 //리드카피
@@ -97,6 +196,10 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
     font-weight: 800;
     line-height: normal;
     letter-spacing: -0.68px;
+    @media (max-width:770px) {
+        font-size: 12px;
+        letter-spacing: -0.48px;
+    }
 }
 //서브메뉴
 .sb_menuT{      
@@ -114,14 +217,18 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
     font-weight: 300;
     letter-spacing: -0.68px;
     line-height: normal;
+    @media (max-width:770px) {
+        font-size: 12px;
+    }
 }
 
 //하단메뉴
 .b_Menu{
     font-size: 15px;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 400;
     line-height: normal;
+    color: white;
 }
 
 // 하단메뉴 의 소메뉴 
@@ -131,6 +238,7 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
     font-style: normal;
     font-weight: 300;
     line-height: normal;
+    color: white;
 }
 
 .text-black{
@@ -152,15 +260,20 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
     font-weight: 500;
     line-height: normal;
     letter-spacing: -0.68px;
+    @media (max-width:770px) {
+        font-size: 12px;
+    }
 }
 
 //마리오 컨텐츠 타이틀
 .m_title{
-    color: #fff;
     font-size: 70px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    @media (max-width:770px) {
+        font-size: 40px;
+    }
     
 }
 
@@ -171,6 +284,9 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    @media (max-width:770px) {
+        font-size: 15px;
+    }
 }
 .m_Menu26{
     
@@ -179,6 +295,9 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    @media (max-width:770px) {
+        font-size: 15px;
+    }
 }
 //마리오 무비 타이틀 텍스트
 .m_Movie{
@@ -186,6 +305,9 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    @media (max-width:770px){
+        font-size: 18px;
+    }
 }
 .m_Movie40{
 
@@ -193,6 +315,9 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
     font-style: normal;
     font-weight: 400; 
     line-height: normal;
+    @media (max-width:770px) {
+        font-size: 30px;
+    }
 }
 //게임 컨텐츠 텍스트
 .gNm{
@@ -201,23 +326,33 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+    
 }
 //캐릭터 이름 텍스트
 .cNm{
- 
+    
     font-size: 30px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    @media (max-width:770px){
+        font-size: 25px;
+    }
 }
 
 // 각 컨텐츠의 간격
 .cententB{
     margin-bottom: 170px;
+    @media (max-width:770px) {
+        margin-bottom : 100px !important;
+    }
 }
 //타이틀과 컨텐츠의 간격
 .ti_Blank{
     margin-bottom : 70px !important;
+    @media (max-width:770px) {
+        margin-bottom : 35px !important;
+    }
 }
 .ti_BlankTop{
     padding-top: 70px;
@@ -232,19 +367,64 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
 .me-51{
     margin-right: 51px !important;
 }
-.subpage{
-    min-height: calc(100vh - 400px);
-}
+
+.button-next,
+    .button-prev{
+        bottom: 0;
+            position: absolute;
+            z-index: 100 !important;
+            width: 48px;
+            height: 48px;
+            top: calc(43% - 50px);
+        
+        @media (min-width:1400px) {
+            top: 0;
+            bottom: 0;
+            width: 48px;
+            height: 48px;
+            top: calc(50% - 50px);
+        }
+        
+    }
+    .button-prev{
+        right: 28px;
+        background: url(/img/png/next.png) no-repeat;
+        opacity: 80%;
+        @media (max-width:1400px) {
+            background: unset;
+            right: 0;
+        }
+
+    }
+    .button-next{
+            
+        left: 28px;
+        background: url(/img/png/prev.png)no-repeat;
+        opacity: 80%;
+        @media (max-width:1400px) {
+            background: unset;
+            left: 0;
+        }
+
+    }
+
+   
+    
+
+
 #hd {
+    background-color: white;
     position: fixed;
     width: 100%;
     z-index: 100;
+    top: 0;
+    
 
     @media (min-width:1400px) {
     overflow: hidden;
     transform: translateX(-50%);
     left: 50%;
-    width: 1728px !important;
+    max-width: 1728px ;
     top: 90px;
     position: absolute;
     z-index: 1000;
@@ -267,142 +447,205 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
     
         
     }
-    
     .trx{
         height: 70px;
-        padding:0 3vw;
+        padding:0 5vw;
         
     }
     h1 {
         a {
-            img {
+            .logo_r_img{
                 display: block;
                max-width: 40vw;
             }
+            .logo_w_img{
+                display: none;
+            }
         }
+        
     }
-    .gnb {
-        margin-right: 3rem !important;
-        .gnb_li a {
-            color: #474545 !important;
-
-            &:hover {
-                color: red !important;
+    @media (max-width:991px) {
+        .m_gnb{
+            left: 0;
+            top: 70px;
+            position: absolute;
+            z-index: 100;
+            .gnb {
+                padding: 9% !important;
+                width: 100vw;
+                border-radius: 0 0 45px 45px;
+                background-color: red;
+               
+                .gnb_li a {
+                    color: #ffffff !important;
+        
+                    &:hover {
+                        color: rgb(0, 0, 0) !important;
+                    }
+                }
+                
             }
         }
     }
     
-        .myicon {
-            .hd_sch{
-                border-radius:30px;
-                overflow:hidden;
-                box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-            
-                .sch_stx
-                {
-                    float: left;
-                    width: 147px;
-                    height: 45px;
-                    padding-left: 10px;
-                    border-radius: 30px 0 0 30px;
-                    background: #F8F2F2 !important;
-                    border: 0;
-                    border-right: 0;
-                    font-size: 1.25em;
-                    color: #fff;
-        
-                }
-                .sch_submit
-                {
-                    float: left;
-                    width: 60px;
-                    height: 45px;
-                    border: 0;
-                    background: #F8F2F2 !important;
-                    color: #fff;
-                    border-radius: 0 30px 30px 0;
-                    cursor: pointer;
-                    font-size: 16px;
-                    
-                    img {
-                        transform: scale(0.8);
-                        
-                    }
-        
-                }
-                .search_i{
-                    background: url(../img/svg/search_icon.svg);
-                    background-size: 20px;
-                }
-            }
-            a {
-                img {
-                    transform: scale(0.8);
-                    
-                }
-            }
-        }
-    .singup{
-        li{
-            font-weight: 500;
-            font-size: 16px;
+    .gnb_list{
+        max-width: 700px;
+    }
+    .gnb_li a {
+        color: #474545 ;
+
+        &:hover {
+            color: red ;
         }
     }
+            
+  
+    #allBtn {
+        i{
+            font-size: 2.8rem;
+        }
+    }
+    .myicon {
+        .hd_sch{
+            width: 100%;
+            border-radius:30px;
+            overflow:hidden;
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        
+            .sch_stx
+            {
+                float: left;
+                width: 80%;
+                height: 45px;
+                padding-left: 10px;
+                border-radius: 30px 0 0 30px;
+                background: #F8F2F2 !important;
+                border: 0;
+                border-right: 0;
+                font-size: 1.25em;
+                
+    
+            }
+            .sch_submit
+            {
+                float: left;
+                width: 20%;
+                height: 45px;
+                border: 0;
+                background: #F8F2F2 !important;
+                color: #000000;
+                border-radius: 0 30px 30px 0;
+                cursor: pointer;
+                font-size: 16px;
+                
+                img {
+                    transform: scale(0.5);
+                    
+                }
+    
+            }
+            .search_i{
+                background: url(../img/svg/search_icon.svg);
+                background-size: 20px;
+            }
+        }
+        .singup{
+            li{
+                font-weight: 500;
+                font-size: 16px;
+            }
+        }
+        
+    }
+        
 }
+    
+
 
 #mainBanner{
-    justify-content: space-between;
-    .mainp{
-        margin-top: 70px;
+    .main_ani{
+        position: relative;
+        overflow: hidden;
         
-        p{
-            a{
-                
-
-                    img{
-                        border-radius: unset;
-                        max-width: 100%;
-    
-                    }
-                
+        height: 70vw;
+        width: 100%;
+        background: radial-gradient(circle, 
+            rgba(44,201,240,1) 0%, 
+            rgba(155,167,208,1) 22%, 
+            rgba(245,130,226,1) 39%, 
+            rgba(250,224,78,1) 80%);
+        background-size: 150% 150%;
+        // position: absolute;
+        // top: -50%;
+        // left: -50%;
+        animation: moveBackground 5s linear 5s infinite;
+        
+        img{
+            width: 100%;
+            position: relative;
+            z-index: 10;
+            animation: mUpM 2s;
             
-            }
-            @media (max-width:770px) {
-                a{
-                    .main_B{
-                        img{
-                            border-radius: unset;
-                            max-width: 100%;
-        
-                        }
-                        
-                    }
-                    
-                }
+            
+        }
+        @media (min-width:1400px) {
+            border-radius: 87px;
+            width: 95vw;
+            height: 900px;
+            img{
+                left: 50%;
+                transform: translateX(-50%);
+                width: unset;
+                animation: mUp  2s;
+                
+                
             }
         }
-    
+        
+        
+
+    }
+    .redSt{
+        display: block;
+        position: absolute;
+        left: 23px;
+        top: -32px;
+        width: 100%;
+        height: 95vw;
+        background-size: cover !important;
+        background: url(/img/png/star_red.png) no-repeat;
+        background-position: center;
+        animation: red_stMove 5s linear infinite;
+    }
+
+           
+            
+       
+     
+    justify-content: space-between;
+    .mainp{
+        width: 100%;
+        margin-top: 70px;
+        
         .smenu{
+            z-index: 10;
+            width: 906px;
             transform: translateX(-50%) translateY(-50%);
             left: 50%;
-            
-            position: absolute;
+            position: relative;
             display: grid;
-            
             height: 113px;
-            background-image: url(../img/png/submenu_bar.png);
+            background-image: url(/img/png/submenu_bar.png);
             background-repeat: no-repeat;
-            background-position: center;
-            background-size: auto 100%;
 
             ul{
-                width: 900px;
-                margin-top: auto;
-                margin-bottom: auto;
+                top: 50%;
+                width: 878px;
+                position: absolute;
+                transform: translateY(-72%);
                 li{
                     text-wrap: nowrap;
                      a{
-                        max-width:5vw ;
                         color: #EC6907 !important;
                         &:hover{
                             color: #924408 !important;
@@ -412,21 +655,10 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
             }
         }
         @media (min-width:1400px) {
-            p{
-                a{
-                    img{
-                        border-radius: 84px;
-                        max-width: 100%;
-    
-                    }
-                        
-                    
-                }
-            }
+            width: unset;
+            
         }
         
-        
-    
     }
  
 }
@@ -448,9 +680,14 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
     }
     
     .swiper {
-        margin-left: 48px;
+        margin-left: unset;
         overflow: hidden;
         position: relative;
+        @media (min-width:770px) {
+        margin-left: 48px;
+        
+            
+        }
     }
     .swiper-slide {
         display: flex;
@@ -459,12 +696,21 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
         p{
             text-wrap: nowrap;
             color: #3e3e3e;
+            @media (min-width:770px) {
+                text-wrap: nowrap;
+                
+                    
+            }
+            
         }
     }
     .news_img1 img {
-        width: 499px;
-        height: 301;
+        width: 500px;
+        height: 300px;
         border-radius: 15px;
+        @media (max-width:1400px) {
+            height: unset;
+        }
     }
     .swiper-wrapper{
         
@@ -473,30 +719,10 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
         
        
     }
-    .button-next,
-    .button-prev{
-        top: 0;
-        bottom: 0;
-        position: absolute;
-        z-index: 100 !important;
-        width: 48px;
-        height: 48px;
-        top: calc(50% - 50px);
-        
-    }
-    .button-prev{
-        right: 28px;
-        background-image: url(../img/svg/arrow_right.svg);
-
-    }
-    .button-next{
-            
-        left: 28px;
-        background-image: url(../img/svg/arrow_left.svg);
-
-    }
-
+    
 }
+
+
 #mContent{
     padding-top: 98px;
     overflow: hidden;
@@ -504,19 +730,34 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
     .redB{
         
         position: relative;
-        background: url(../img/png/dotte_red.jpg);
+        background: url(/img/png/dotte_red.jpg);
         background-repeat: no-repeat;
         background-size: cover;
         border-radius: 20px;
         width: 1824px;
         height: 2235px;
+        @media (max-width:1400px){
+            max-width: 100%;
+        }
+        @media (max-width:770px){
+            
+            height: 1519px;
+            
+
+        }
+        
         
         p{
             padding-bottom: 1rem;
             color: #fff;
+            @media (max-width:770px) {
+                flex-direction: column;
+                display: flex;
+
+            }
         }
         .yBox{
-            background: url(../img/svg/ybox.svg);
+            background: url(/img/svg/ybox.svg);
             width: 256px;
             height: 256px;
             position: absolute;
@@ -530,11 +771,14 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
             animation-fill-mode: forwards;
             
             }
+            @media (max-width:1400px){
+                display: none;
+            }
         }
       
         .mario{
             position: absolute;
-            background: url(../img/png/mario.png) no-repeat;
+            background: url(/img/png/mario.png) no-repeat;
             width: 518px;
             height: 628px;
             bottom: 0;
@@ -545,6 +789,9 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
                 animation: move 2.5s;
                 animation-fill-mode: forwards;
             }
+            @media (max-width:1400px){
+                display: none;
+            }
         }
         .m_ybar{
             width: 192px;
@@ -553,23 +800,41 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
                 position: absolute;
                 text-wrap: nowrap;
                 color: #EC6907;
-                img{
-                    width: 184px !important;
-                    height: 72px !important;
+                
+            }
+            img{
+                
+                width: 184px ;
+                height: 72px ;
+                @media (max-width:770px) {
+                    height: 50px;
+                    width: 125px;
                 }
+                
             }
 
         }
         
 
         .rZone{
-            background: url(../img/svg/r_zone.svg)no-repeat;
+            background: url(/img/svg/r_zone.svg)no-repeat;
             overflow: hidden;
             position: absolute;
             width: 1911px;
             height: 528px;
             left: calc(-48px);
             top: calc(27.2%);
+            @media (max-width:1400px){
+                
+                overflow: hidden;
+                position: absolute;
+                width: 100%;
+                max-height: 400px;
+                background: none;
+                top: unset;
+                left: unset;
+
+            }
             
             .marioSwiper{
                 top: calc(50%);
@@ -585,12 +850,20 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
                     justify-content: center;
                     align-items: center;
                     p{
+                        flex-direction: column;
+                        display: flex;
                         color: #fff;
+                    
+                        
                         a{
                             img{
                                 width: 450px;
-                                height: 300px;
+                                
                                 border-radius: 15px;
+                                @media (max-width:770px) {
+                                    width: 300px;
+                                    height: 170px;
+                                }
                             }
                         }
 
@@ -601,68 +874,126 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
                         margin: 0 0 auto auto;
                         width: 1400px;
                         height: auto;
+                        @media (max-width:770px) {
+                            max-width: 900px;
+                        }
                 }
                 
             }
 
-            .button-next{
-                position: absolute;
-                left: calc(9%);
-                top: calc(35%);
-                z-index: 1000;
-                transform: rotate(-180deg);
-
-                
-            }
+            .button-next,
             .button-prev{
                 position: absolute;
-                right: calc(9%);
-                top: calc(35%);
                 z-index: 1000;
-                
+                right: 8%;
+                background: url(/img/svg/nextButton.svg)no-repeat;
+                width: 53px;
+                height: 102px;
+
+                @media (max-width:1400px) {
+                    display: none;
+                }
             }
+            .button-next{
+                left: 8% !important;
+                transform: rotate(-180deg);
+            }
+           
         }
         .movie{
             position: absolute;
             z-index: 10;
-            top: calc(54%);
+            bottom: 10%;
+            @media (max-width:770px) {
+                bottom: 5%;
+            }
             .mMovie{
                 width: 547px;
                 height: 144px;
-                background: url(../img/svg/mario_Movie.svg)no-repeat;
+                background: url(/img/png/mario_Movieft.png)no-repeat;
+                @media (max-width:770px) {
+                    height: 24vw;
+                    background-size: cover;
+                    background-position: center;
+                    width: 80%;
+                    max-width: 100%;
+                }
     
             }
             iframe{
-                display: none;
-                border-radius: 20%;
+                position: fixed;
+                border-radius: 30px;
+                @media (max-width:770px) {
+                    height: 300px;
+                    width: 100%;
+                    position: fixed;
+                    border-radius: 30px;
+                }
             }
-            .youtube_img{
-                width: 1420px;
-                height: 525px;
-                background: url(../img/svg/mario_Movie_in.svg )no-repeat;
-                transition:0.3s ;
-                &:hover{
+            .youtube_img {
+                position: relative;
+                width: 1400px;
+                height: 500px;
+                max-width: 100%;
+                background: url(/img/png/mario_movie.png) no-repeat;
+                background-size: cover;
+                border-radius: 30px;
+                box-shadow: 25px 31px 4px rgba(117, 9, 9, 0.61);
+                background-position: center;
+                transition: 0.3s;
+            
+                @media (max-width: 770px) {
+                    width: 100%; /* 너비를 100%로 설정 */
+                    height: 300px;
+                    background: url(/img/png/mario_movieM.png) no-repeat;
+                    background-size: cover;
+                    background-position: center;
+                }
+            
+                &:hover {
                     transform: scale(1.1);
+                    @media (max-width:1400px) {
+                        transform: none !important;
+                    }
                 }
-                .play-button {
-                    width: 57px; /* 버튼 너비 */
-                    height: 62px; /* 버튼 높이 */
-                    background-color: #ffffff; /* 버튼 배경색 */
-                    border: none; /* 테두리 없음 */
-                    cursor: pointer; /* 커서 모양 변경 */
-                    box-shadow: 0 4px 15px rgba(10, 10, 10, 0.438); /* 그림자 */
-                    transition: background-color 0.3s, transform 0.3s; /* 전환 효과 */
-                    clip-path: polygon(0 0, 100% 50%, 0 100%); /* 오른쪽으로 뾰족한 모양 */
-                    position: absolute; /* 위치 설정 */
-                    left: 47%;
-                    top: 45%;
+                div{
+                    img{
+                        left: 10%;
+                        transform: translateY(-50%);
+                        top: 50%;
+                        position: absolute;
+                        @media (max-width:1400px) {
+                            transform: translateY(-50%);
+                            width: 37vw;
+                        }
+                    }
+                    
                 }
-                
-                .play-button:hover {
+            }
+            
+            .play-button {
+                width: 57px; /* 버튼 너비 */
+                height: 62px; /* 버튼 높이 */
+                background-color: #ffffff; /* 버튼 배경색 */
+                border: none; /* 테두리 없음 */
+                cursor: pointer; /* 커서 모양 변경 */
+                box-shadow: 0 4px 15px rgba(10, 10, 10, 0.438); /* 그림자 */
+                transition: background-color 0.3s, transform 0.3s; /* 전환 효과 */
+                clip-path: polygon(0 0, 100% 50%, 0 100%); /* 오른쪽으로 뾰족한 모양 */
+                position: absolute; /* 위치 설정 */
+                left: 47%;
+                top: 45%;
+                &:hover {
                     background-color: #e00303; /* 마우스 오버 시 배경색 */
                     transform: scale(1.1); /* 마우스 오버 시 확대 */
                 }
+                @media (max-width:770px) {
+                    max-width: 34px;
+                    height:37px
+                }
             }
+            
+            
 
         }
         
@@ -686,23 +1017,36 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
     }
     
     .swiper {
-        margin-left: 48px;
+        margin-left: unset;
         overflow: hidden;
         position: relative;
+        @media (min-width:770px) {
+        margin-left: 48px;
+        
+            
+        }
     }
     .swiper-slide {
         display: flex;
         justify-content: center;
         align-items: center;
+        &:hover{
+            .leadcopy{
+                color: red;
+            }
+        }
         p{
             text-wrap: nowrap;
             color: #3e3e3e;
         }
     }
     .news_img1 img {
-        width: 499px;
-        height: 301;
+        height: 300px;
+        width: 500px;
         border-radius: 15px;
+        @media (max-width:1400px) {
+            height: unset;
+        }
     }
     .swiper-wrapper{
         
@@ -711,30 +1055,6 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
         
        
     }
-    .button-next,
-    .button-prev{
-        top: 0;
-        bottom: 0;
-        position: absolute;
-        z-index: 100 !important;
-        width: 48px;
-        height: 48px;
-        top: calc(50% - 50px);
-        
-    }
-    .button-prev{
-        right: 28px;
-        background-image: url(../img/svg/arrow_right.svg);
-
-    }
-    .button-next{
-            
-        left: 28px;
-
-        background-image: url(../img/svg/arrow_left.svg);
-
-    }
-
 }
 
 #crContent{
@@ -747,100 +1067,235 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
         }
     }
     .crdiv{
-        max-width: 1400px;
+        @media (min-width:1400px) {
+            max-width: 1400px;
+            height: 61vh;
+        }
+        
         ul{
             li{
             
                 border-radius: 30px;
                 width: 335px;
                 height: 550px;
-                background: url(../img/png/cr_img_j.png)no-repeat;
-                background-size: 50vh;
-                background-position: top;
-                background-color: #EFEFEF;
+                // background: no-repeat;
+                background-size: 38vh;
+                background-position: center;
+                background-color: #EFEFEF !important;
                 &:hover{
                     transform: scale(1.1);
                     transition: 0.5s;
                 }
+                
+                .cr_box{
+                    bottom: 0;
+                    width: 280px;
+                    height: 250px;
+                    border-radius: 20px;
+                    padding: 30px 0 40px 0;
+                    transform: translateX(-50%) translateY(-7%);
+                    left: 50%;
+                    p{
+                        
+                        span{
+                            padding: 10px 20px;
+                            border-radius: 20px;
+                            background-color: #033333;
+                            display: inline-block;
+                            color: #fff;
+                            
+                            
+                            
+                        }
+                    }
+                    h3{
+                        color: #033333;
+                    }
+                    @media (max-width:768px) {
+                        width: 90% !important;
+                        background-color: white;
+                        padding: 20px;
+                        border-radius: 10px;
+                        position: absolute;
+                        ui{
+                            list-style: none;
+                            padding: 0;
+                            margin: 0;
+                            li{
+                                margin-bottom: 20px;
+                                position: relative;
+                                background-color: black;
+
+                            }
+                        }
+                    }
+            
+
+            
+            
+                }
                     
                         
     
                 
             }
-            .cr_box{
-                        width: 305px;
-                        height: 250px;
-                        border-radius: 10%;
-                        margin-left: auto;
-                        margin-right: auto;
-                        margin-top: 250px;
-                        padding: 30px 0 40px 0;
-                        p{
-                            
-                            span{
-                                display: inline-block;
-                                color: #fff;
-                                width: 90px;
-                                height: 30px;
-                                background: url(../img/svg/cr_button.svg);
-                                
-                            }
-                        }
-                        h3{
-                            color: #033333;
-                        }
-                
+            
+        }
+       
+    }
+    //캐릭터 이미지
+    .cr_j{
+        background: url(/img/png/cr_img_j.png) no-repeat;
+        background-position: top;
+        background-size: 45vh;
+    }
+    .cr_kby{
+        background: url(/img/png/kirby.png) no-repeat;
+        background-position: 50% 10%;
+        background-size: 30vh;
 
+    }
+    .cr_spl{
+        background: url(/img/png/splatoon.png) no-repeat;
+        background-position: top;
+        background-size: 45vh;
+    }
+    .cr_pik {
+        background: url('/img/png/pikmin.png') no-repeat;
+            background-size: 23vh;
+    background-position: 57% top; // 왼쪽에서 57%만큼 옮겨진 위치에 배치
+    }
+    
+    #tabs {
+        .tads-nvi {
+            border: 0 !important;
+            background-color: unset !important;
+            width: 90% !important;
+            
+            li {
+                border-radius: 18px;
+                width: 70px;
+                height: 31px;
                 
-                
+                a {
+                    color: black;
+                    font-size: 12px;
+                    text-align: center;
+                    font-weight: 700;
+                }
             }
         }
+    
+        ul.ui-tabs-nav {
+            li {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: rgb(189, 186, 186); // 비활성화된 탭의 기본 색상
+                color: white; // 비활성화된 탭의 텍스트 색상
+                border: none;
+                cursor: pointer;
+    
+                &:hover {
+                    background: darkgray; // 비활성화된 탭을 hover할 때 색상
+                }
+    
+                &.ui-tabs-active {
+                    background: black !important; // 활성화된 탭의 배경색
+                    a{
+                        color: white !important; // 활성화된 탭의 텍스트 색상
+                    }
+                    
+    
+                    &:hover {
+                        background: black !important; // hover 시에도 검은색 유지
+                        color: white !important; // 텍스트 색상 유지
+                    }
+                }
+            }
+        }
+        .tabs-content {
+            margin-top: 20px;
+        }
     }
+    
 }
 
 #footer{
+    left: 0;
+    position: absolute;
     overflow: hidden;
     background-color: #F00;
     .f_help{
-        border-bottom: 1px solid #fff;
-        ul{
+        border-bottom:unset;
+        @media (min-width:1400px) {
+            border-bottom: 1px solid #fff;
+            ul{
             
-            max-width: 1400px;
-            margin: 0 auto !important;
-            li{
-                border: 1px solid #FF9595;
-                padding-left: 50px !important;
-                padding-top: 20px !important;
-                min-width: 352px;
-                min-height: 250px;
-                p{
-                    color: white;
-
+                max-width: 1400px;
+                margin: 0 auto !important;
+                li{
+                    border: 1px solid #FF9595;
+                    padding-left: 50px !important;
+                    padding-top: 20px !important;
+                    min-width: 352px;
+                    min-height: 250px;
+                    p{
+                        color: white;
+                       
+                    }
+                    a{ 
+                        margin-bottom: 0.75rem;
+                        
+                    }
+                    .f_smenu{
+                        display: flex;
+                        flex-direction: column;
+                    }
+                    
+                    
                 }
-                a{
-                    margin-bottom: 0.75rem;
-                    color: white;
+                
+            }
+        }
+        @media (max-width:1400px) {
+            li {
+                padding:0 10% !important;
+                &:hover {
+                    .f_smenu {
+                        display: flex;
+                        flex-direction: column;
+                        height: 60px;
+                        width: 71%;
+                        transition: height 0.5s; /* 올바른 구문 */
+                        a{
+                            margin-bottom: 3px;
+                        }
+                    }
                 }
             }
         }
+        
+        
+        
+        
+        
 
+    }
+    .f_smenu{
+        display: none;
+        flex-direction: column; 
     }
     .f_about{
         max-width: 1400px;
-        padding: 50px;
+        padding: 10%;
+        @media (min-width:1400px) {
+            padding: 54px;
+        }
         
-        .icons{
-            h3{
-    
-            }
-                        
+        .icons{     
             .sns_icon{
                 width: 173px !important;
-                li{
-                    a{
-                    
-                    }
-                } 
             } 
         }
     }
@@ -854,4 +1309,67 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
         }
     }
     
+}
+.img_cg{
+    #hd{
+        transition: all 0.5s;
+        width: 100%;
+        max-width: 100%;
+        border-radius: 0;
+        top: 0;
+        position: fixed;
+        background-color: rgba(0, 0, 0, 0.77);
+        backdrop-filter: blur(4.150000095367432px);
+        
+        .logo_w_img{
+            display: block !important;
+        }
+        .logo_r_img{
+            display: none !important;
+        }
+        #allBtn i{
+            color: white;
+        }
+        .gnb_li{
+            a{
+                color: white;
+            }
+        }
+        .sing_up a{
+            color: white;
+        }
+        
+
+    }
+} 
+
+@media (max-width:991px) {
+    .menuBkg{
+        #hd{
+            &:before{
+            content: "";
+            height: 100vh;
+            left: 0;
+            position: fixed;
+            right: 0;
+            top: 70px;
+            z-index: 1;
+            background-color: rgba(0, 0, 0, 0.596);
+    
+                @media (min-width:991px) {
+                    content: "";
+                    position: unset;
+                    background-color: unset;
+                }
+            }
+            #allBtn{
+
+            }
+            .m_gnb{
+                .gnb{
+                    display: block !important;
+                }
+            } 
+        }
+    }
 }
