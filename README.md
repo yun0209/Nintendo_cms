@@ -1,7 +1,7 @@
 # 웹에서도 앱에서 enjoy Nentendo !
 
 ## 그누보드 로 리뉴얼 한 윤여선 단독작업 페이지 입니다.
-![header](https://capsule-render.vercel.app/api?type=Transparent&color=auto&height=300&section=header&text=capsule%20render&fontSize=90)
+
 <h1> 왜 닌텐도 일까요? </h1>
 <p>닌텐도 기존 페이지를 리뉴얼하며, 다소 친근함과 흥미를 유발하는 요소가 부족하다는 느낌이 있었습니다.<br>
   사용자 경험을 극대화하고, 탐구하듯 사이트를 소비할 수 있도록 친근감과 흥미를 자극하는 요소를 추가하고자 했고,<br>
